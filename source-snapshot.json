@@ -1,0 +1,69 @@
+{
+  "name": "oddlings-lab",
+  "production_url": "https://oddlings-lab.knightatha.chatgpt.site",
+  "production_version": "Sites v2",
+  "public_project_identifier": "appgprj_6ac6e0172e10819183dafb5d1b6ee8c0",
+  "original_source_commit": "0fc4c041b2669a7f4c28390471c203077d099cbe",
+  "original_files": [
+    {
+      "path": "dist/app.js",
+      "sha256": "ff507d19da618a81d1712897e9c1705b7f313a2c89944ce4c215e6ddfcb18d14",
+      "size": 29519
+    },
+    {
+      "path": "dist/friends.js",
+      "sha256": "3790ab9a520b526ceb0d96f9c21e5d3addb3a8b0549bed9f53a9b3cfebe7b310",
+      "size": 20026
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "340a974f591e7dbe51e797993891bbf336fcd7a9b2154ad0a33fa79509d8c9d8",
+      "size": 8091
+    },
+    {
+      "path": "dist/style.css",
+      "sha256": "ccaa68b2afa878e8edbe857e5111096f226ac4c51ddc355605f6baf2b6b709d6",
+      "size": 13886
+    },
+    {
+      "path": ".openai/hosting.json",
+      "sha256": "58be8294c2bf08c65a848f4be50463f79c0bf9097dc1a7079a38268e1ca18fef",
+      "size": 106
+    },
+    {
+      "path": "serve.mjs",
+      "sha256": "063c98c55b7493d6b531829e497762c47803bdacbbd160d0644005144061bd4e",
+      "size": 1970
+    },
+    {
+      "path": "qa/browser-tests.js",
+      "sha256": "313cc86414ae38ac5bd3152c8f563d5dc4bfc409f03389437b84a34a97b1da23",
+      "size": 12175
+    },
+    {
+      "path": "qa/contact-sheet.js",
+      "sha256": "6071dc95d6cd3f1d96caa356f4e2463b4893cc3aa86ab2255b7f3b6921143e96",
+      "size": 1274
+    },
+    {
+      "path": "qa/friend-tests.js",
+      "sha256": "10cd0347b0f03853576371e92331528cef55cfbb0ef31cae495658bc9d5f0d7d",
+      "size": 13346
+    },
+    {
+      "path": "qa/qa.css",
+      "sha256": "cee1e2f081b46b55df3cbee9526751fdc9bca86f932a3432dfd4be1004498401",
+      "size": 458
+    },
+    {
+      "path": "qa/text-zoom.js",
+      "sha256": "ffc05a47d822564b9c2e750208c1eb58e7825ae8df3e73d76b2846efa596fb01",
+      "size": 55
+    },
+    {
+      "path": "qa/run-friends.mjs",
+      "sha256": "385e852c70f76daef65c282a2e41ead878938fdb029e7c72277740660f7aa7c0",
+      "size": 5038
+    }
+  ]
+}

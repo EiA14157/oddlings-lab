@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="사물에 표정과 작은 장식을 더해 나만의 엉뚱한 친구를 만들어요. 무료로 만들고 PNG로 저장하는 작은 놀이 공방.">
+  <meta name="theme-color" content="#653be5">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>엉뚱이 공방 · Oddlings</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%23653be5'/%3E%3Cpath d='M14 35Q12 14 30 19Q43 8 48 26Q61 36 47 48Q27 57 14 35Z' fill='%23d9ff70'/%3E%3Ccircle cx='25' cy='31' r='3'/%3E%3Ccircle cx='40' cy='31' r='3'/%3E%3Cpath d='M27 40Q33 46 39 39' fill='none' stroke='%23232330' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <script src="./friends.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workbench" data-i18n="skip">만들기로 바로 가기</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="엉뚱이 공방 홈" id="brand">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 22Q5 7 18 11Q29 2 31 17Q41 25 29 32Q15 39 6 22Z" fill="currentColor"/><circle cx="15" cy="21" r="2" fill="#252335"/><circle cx="25" cy="20" r="2" fill="#252335"/><path d="M17 27Q22 30 26 25" fill="none" stroke="#252335" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span><strong data-i18n="brand">엉뚱이 공방</strong><small>ODDLINGS</small></span>
+    </a>
+    <div class="header-right"><span class="local-note" data-i18n="localBadge">작은 브라우저 놀이터</span><button type="button" class="language-button" id="language" aria-label="Switch to English">EN <span aria-hidden="true">↔</span></button></div>
+  </header>
+  <main id="workbench">
+    <nav class="play-modes" aria-label="놀이 선택" id="play-modes">
+      <button type="button" id="mode-free" aria-pressed="true">자유 만들기</button>
+      <button type="button" id="mode-friends" aria-pressed="false">친구와 비교</button>
+    </nav>
+    <div class="intro"><div><p class="eyebrow" data-i18n="eyebrow">평범한 사물, 엉뚱한 친구</p><h1 data-i18n="headline">오늘은 어떤 엉뚱이?</h1></div><p class="intro-note" data-i18n="intro">섞고, 바꾸고, 마음에 들면 데려가요.</p></div>
+    <section id="friend-context" class="friend-context" hidden aria-labelledby="friend-heading">
+      <div><h2 id="friend-heading" tabindex="-1"></h2><p id="friend-instruction"></p></div>
+      <span class="flow-step" id="flow-step"></span>
+    </section>
+    <section id="link-error" class="link-error" hidden role="alert"><h2 id="link-error-title"></h2><p id="link-error-note"></p><button type="button" id="recover-link" class="button button-purple"></button></section>
+    <div class="workbench">
+      <section class="creation" aria-labelledby="preview-heading">
+        <div class="canvas-top"><h2 id="preview-heading" data-i18n="preview">내 엉뚱이</h2><span class="edition" aria-hidden="true">✦ MADE BY YOU</span></div>
+        <div class="stage" id="stage"></div>
+        <div class="creation-caption"><strong id="character-name"></strong><span id="recipe"></span></div>
+        <div class="actions"><button type="button" id="random" class="button button-purple"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1"/><circle cx="16" cy="8" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg><span data-i18n="random">랜덤 만들기</span></button><button type="button" id="download" class="button button-dark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span data-i18n="download">PNG 저장</span></button></div>
+        <div class="secondary-actions"><button type="button" id="undo" class="text-button" disabled><span aria-hidden="true">↶</span><span data-i18n="undo">되돌리기</span></button><button type="button" id="reset" class="text-button"><span aria-hidden="true">↺</span><span data-i18n="reset">처음으로</span></button><button type="button" id="share" class="text-button" hidden><span aria-hidden="true">↗</span><span data-i18n="share">파일 공유</span></button></div>
+        <p id="status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+      <section class="parts" aria-labelledby="parts-heading">
+        <div class="parts-heading"><h2 id="parts-heading" data-i18n="parts">취향대로 조립하기</h2><span class="parts-count" data-i18n="count">864가지 조합</span></div>
+        <div class="tabs" role="tablist" aria-label="파츠 종류" id="tabs"></div>
+        <div id="part-panel" role="tabpanel" tabindex="0" class="part-panel"></div>
+        <div class="color-section"><div class="field-heading"><label data-i18n="color">몸체 색</label><span id="color-label"></span></div><div class="colors" id="colors"></div></div>
+        <div class="name-section"><label for="name" data-i18n="nameLabel">이름을 붙여줄까요? <span class="optional">선택</span></label><input type="text" id="name" maxlength="24" autocomplete="off" spellcheck="false" placeholder="예: 말랑 주전자"><p class="field-note" data-i18n="nameNote">이름은 이 화면에만 머물러요. 저장한 그림에는 함께 담겨요.</p></div>
+      </section>
+    </div>
+    <section id="friend-actions" class="friend-actions" hidden aria-label="친구 비교">
+      <button type="button" class="button button-purple" id="friend-primary"></button>
+      <p id="hidden-note" class="field-note"></p>
+    </section>
+    <section id="comparison" class="comparison" hidden aria-labelledby="comparison-title">
+      <h2 id="comparison-title" tabindex="-1"></h2>
+      <div class="comparison-grid">
+        <article class="comparison-card"><h3 id="self-view-label"></h3><div id="self-view-art"></div></article>
+        <article class="comparison-card friend-view-card"><h3 id="friend-view-label"></h3><div id="friend-view-art"></div></article>
+      </div>
+      <div class="comparison-actions"><button type="button" id="comparison-download" class="button button-dark"></button><button type="button" id="edit-friend" class="button button-outline"></button></div>
+    </section>
+    <section id="link-result" class="link-result" hidden aria-labelledby="link-heading">
+      <h2 id="link-heading"></h2><p id="link-instruction"></p>
+      <label for="friend-link" id="link-label"></label><input id="friend-link" type="text" readonly autocomplete="off" spellcheck="false">
+      <div class="link-buttons"><button type="button" id="copy-link" class="button button-dark"></button><button type="button" id="share-link" class="button button-outline" hidden></button><button type="button" id="select-link" class="button button-outline"></button></div>
+      <p id="link-privacy" class="field-note"></p>
+      <form id="open-reply" hidden><label for="reply-input" id="reply-label"></label><div class="reply-input-row"><input id="reply-input" type="url" maxlength="2048" autocomplete="off" spellcheck="false"><button type="submit" class="button button-purple" id="open-reply-button"></button></div></form>
+    </section>
+    <p id="flow-status" class="flow-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  </main>
+  <footer><p data-i18n="footer">가입 없이, 업로드 없이. 만드는 동안 모든 작업은 이 브라우저 안에서만 이루어져요.</p><span aria-hidden="true">A LITTLE ODD. A LOT OF YOU.</span></footer>
+</body>
+</html>
