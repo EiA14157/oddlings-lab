@@ -1,6 +1,6 @@
 # 엉뚱이 공방 · Oddlings
 
-Private source snapshot for https://oddlings-lab.knightatha.chatgpt.site (Sites v2), verified on 2026-10-08. Original deployment source commit: `0fc4c041b2669a7f4c28390471c203077d099cbe`. The GitHub repository begins with a new snapshot commit and contains no prior private Git history.
+Open-source snapshot for https://oddlings-lab.knightatha.chatgpt.site (Sites v2), verified on 2026-10-08. Original deployment source commit: `0fc4c041b2669a7f4c28390471c203077d099cbe`. The GitHub repository begins with a new snapshot commit; earlier deployment history is not included.
 
 ## Run
 
@@ -18,4 +18,12 @@ Runtime files in `dist/` are copied byte-for-byte from the deployment source com
 
 ## Assets and exclusions
 
-See `ASSET-NOTES.md`. Existing Git metadata, credentials, environment files, node_modules, caches, browser profiles, downloads, archives, deployment tokens, personal logs and QA screenshots/results are excluded. No essential production file was excluded. No open-source code license has been assigned. Keep this repository private; future publication requires a separate authorized decision.
+See `ASSET-NOTES.md`. Existing Git metadata, credentials, environment files, node_modules, caches, browser profiles, downloads, archives, deployment tokens, personal logs and QA screenshots/results are excluded. No essential production file was excluded. The application code, project documentation and original project artwork are available under the MIT license. See the license scope below.
+
+## License
+
+Copyright (c) 2026 EiA.
+
+The application source code, project documentation and original project artwork are licensed under [MIT](LICENSE). Original project artwork includes the creature SVG shapes drawn in application code and the inline SVG icon.
+
+Third-party components retain their existing licenses and notices. The project MIT license does not replace dependency licenses or license works merely linked from this repository. See [ASSET-NOTES.md](ASSET-NOTES.md) for asset provenance and dependency details.

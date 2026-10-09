@@ -1,5 +1,13 @@
 # Asset provenance and licensing
 
-The creatures are original SVG shapes drawn in application code. No external bitmap, 3D model, font or game asset is required.
+## Project materials
 
-No open-source license is newly assigned to the application code or project artwork. This is a private source backup. Third-party packages are obtained from npm rather than vendored: NPC development dependencies jsdom 30.1.2 and @napi-rs/canvas 1.0.10 declare MIT licenses; optional Oddlings browser QA uses playwright-core under Apache-2.0. Preserve the applicable dependency notices if distributing dependency code later. No external assets with unclear redistribution rights were included.
+The creatures are original SVG shapes drawn in application code. The inline SVG icon is also project artwork. No external bitmap, 3D model, font or game asset is required.
+
+Copyright (c) 2026 EiA. The application code, project documentation and original project artwork, including the creature SVG shapes drawn in application code and the inline SVG icon, are licensed under [MIT](LICENSE).
+
+## Third-party materials
+
+The optional browser QA dependency playwright-core 1.64.0 is listed under Apache-2.0 in package-lock.json. It is downloaded from npm and its code is not vendored in this repository.
+
+Third-party components retain their existing licenses and notices. Preserve applicable license and attribution notices if distributing dependency code later. The project MIT license does not replace these licenses or grant rights to external reference works, system fonts or third-party trademarks.
